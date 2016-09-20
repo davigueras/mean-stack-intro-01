@@ -6,7 +6,7 @@ var app = express();
 
 // Incluyo la libreria de Mongoose y la conecto a la db mongo
 var mongoose = require('mongoose');
-mongoose.Promise = global.Promise; // Algo que hay que ahcer aparae vitar warns
+mongoose.Promise = global.Promise; // mongoose ha de usar las promises de node
 mongoose.connect('mongodb://localhost:27017/rest-api-initiation-01');
 
 // Incluyo la libreria body-parser
